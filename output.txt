@@ -1,0 +1,40 @@
+  
+prior to write
+ wrote(3) = 8
+after write
+ ev_io_stop(0xb76dd480, 0x804b200) - write watcher
+ ev_io_start(0xb76dd480, 0x804b1e0) - read watcher
+prior to read
+
+read(3) = 13
+after read
+ ev_io_stop(0xb76dd480, 0x804b1e0) - read watcher
+ ev_io_start(0xb76dd480, 0x804b200) - write watcher
+prior to write
+ wrote(3) = 8
+after write
+ ev_io_stop(0xb76dd480, 0x804b200) - write watcher
+ ev_io_start(0xb76dd480, 0x804b1e0) - read watcher
+prior to read
+
+read(3) = 11
+after read
+ ev_io_stop(0xb76dd480, 0x804b1e0) - read watcher
+ ev_io_start(0xb76dd480, 0x804b200) - write watcher
+prior to write
+ wrote(3) = 8
+after write
+ ev_io_stop(0xb76dd480, 0x804b200) - write watcher
+ ev_io_start(0xb76dd480, 0x804b1e0) - read watcher
+prior to read
+
+read(3) = 2
+after read
+ ev_io_stop(0xb76dd480, 0x804b1e0) - read watcher
+ ev_io_start(0xb76dd480, 0x804b200) - write watcher
+prior to write
+ wrote(3) = 8
+after write
+ ev_io_stop(0xb76dd480, 0x804b200) - write watcher
+ ev_io_start(0xb76dd480, 0x804b1e0) - read watcher
+  
